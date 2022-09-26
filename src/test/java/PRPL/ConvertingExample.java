@@ -8,6 +8,7 @@ public class ConvertingExample {
         String b = "11";
         Integer s = Integer.parseInt(a);
         Integer x = Integer.valueOf(b);
+        Integer y = Integer.valueOf(b);
         System.out.println(s);
         System.out.println(x);
 
@@ -22,14 +23,14 @@ public class ConvertingExample {
     static void reverseString() {
 
         String s1 = "Welcome to Edureka";
-        String y = "";
+        StringBuilder y = new StringBuilder();
         char[] ch = s1.toCharArray();
-        for (int i = 0; i < ch.length; i++) {
-            System.out.print(ch[i]);
+        for (char c : ch) {
+            System.out.print(c);
         }
         System.out.println("");
         for (int i = s1.length() - 1; i >= 0; i--) {
-            y += s1.charAt(i);
+            y.append(s1.charAt(i));
 
 
         }
